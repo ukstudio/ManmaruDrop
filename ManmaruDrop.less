@@ -1,0 +1,88 @@
+@base_color: #e1e6fa;
+@base_font: 'Osaka';
+@base_font_size: 12px;
+
+html {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: @base_color;
+}
+
+body {
+  font-family: @base_font;
+  font-size: @base_font_size;
+}
+
+/*
+ * メインウィンドウ
+ */
+
+body.normal {
+  .line {
+    margin: 1ex;
+    padding-top: 0.5ex;
+    padding-bottom: 0.5ex;
+    -webkit-border-radius: 6px;
+  }
+
+  .line.text {
+    background-color: #fff;
+  }
+
+  .line[alternate=even] {}
+  .line[alternate=odd] {}
+
+  /* avatorがはみ出す場合があるのでそれの対応 */
+  .line.text:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+    
+  .line.event {
+    background-color: #375d81;
+  }
+
+  /* 時間 */
+  .line .time {
+    font-size: 0.9em;
+    float: right;
+  }
+
+  /* アイコン */
+  .avatar {
+    display: block;
+    float: left;
+  }
+
+  /* 発言者 */
+  .sender {
+    float: left;
+    display: block;
+    width: 10ex;
+    
+    font-weight: bold;  
+    text-align: right;
+  }
+
+  .line.text[type=notice] .sender {}
+
+  /* 発言 */
+  .message {
+    display: block;
+    color: @base_color;
+    text-align: center;
+  }
+
+  .message[type=privmsg]{
+    margin-left: 15ex;
+    color: #000;
+    text-align: left;
+  }
+
+  .message[type=notice]{ 
+    margin-left: 15ex;
+    text-align: left;
+    color: #666;
+  }
+}
