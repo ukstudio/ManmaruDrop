@@ -7,6 +7,9 @@ html
   background-color = !base_color
 
 .time
+  font-size: 0.9em
+  float: right
+
   &:before
     content: "["
   &:after
@@ -35,10 +38,6 @@ body
       &.event
         background-color = !highlight_color
 
-      .time
-        font-size: 0.9em
-        float: right
-
     .avatar
       display: block
       float: left
@@ -62,3 +61,18 @@ body
 
       &[type=notice]
         color: #666666
+
+  &.console
+    font-size: 0.8em
+    
+    .sender
+      margin-right: 1ex
+      float: left
+
+    .place
+      color: #666
+
+    .message
+      display: block
+      margin-left: 2ex
+      clear: both
