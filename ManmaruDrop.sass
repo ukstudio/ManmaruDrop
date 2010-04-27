@@ -1,12 +1,16 @@
+!base_color = #e1e6fa
+!highlight_color = #375d81
+
 html
   padding-top: 0
   padding-bottom: 0
-  background-color: #e1e6fa
+  background-color = !base_color
 
 
 body
-  font-family: 'Osaka'
-  font-size: 12px
+  :font
+    :family 'Osaka'
+    :size 12px
 
   &.normal
     .line
@@ -24,7 +28,7 @@ body
           clear: both
 
       &.event
-        background-color: #375d81
+        background-color = !highlight_color
 
       .time
         font-size: 0.9em
@@ -43,15 +47,13 @@ body
 
     .message
       display: block
-      color: #e1e6fa
+      color = !base_color
       text-align: center
+      margin-left: 15ex
+      text-align: left
 
       &[type=privmsg]
-        margin-left: 15ex
         color: #000000
-        text-align: left
 
       &[type=notice]
-        margin-left: 15ex
-        text-align: left
         color: #666666
