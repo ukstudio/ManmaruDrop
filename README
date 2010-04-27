@@ -1,8 +1,8 @@
 Theme for Limechat for MacOS X
 
-$ sudo gem install less
-$ lessc ManmaruDrop.less
+$ sudo gem install haml
+$ sass ManmaruDrop.sass ManmaruDrop.css
 
 $ cd ~/Library/Application Support/LimeChat/Themes
-$ ln /path/to/repos/ManmaruDrop.css ManmaruDrop.css
-$ ln /path/to/repos/ManmaruDrop.yaml ManmaruDrop.yaml
+$ ln -s /path/to/repos/ManmaruDrop.css ManmaruDrop.css
+$ ln -s /path/to/repos/ManmaruDrop.yaml ManmaruDrop.yaml

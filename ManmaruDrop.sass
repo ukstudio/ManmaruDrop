@@ -1,0 +1,57 @@
+html
+  padding-top: 0
+  padding-bottom: 0
+  background-color: #e1e6fa
+
+
+body
+  font-family: 'Osaka'
+  font-size: 12px
+
+  &.normal
+    .line
+      margin: 1ex
+      padding-top: 0.5ex
+      padding-bottom: 0.5ex
+      -webkit-border-radius: 6px
+
+      &.text
+        background-color: #ffffff
+
+        &:after
+          content: ""
+          display: block
+          clear: both
+
+      &.event
+        background-color: #375d81
+
+      .time
+        font-size: 0.9em
+        float: right
+
+    .avatar
+      display: block
+      float: left
+
+    .sender
+      float: left
+      display: block
+      width: 10ex
+      font-weight: bold
+      text-align: right
+
+    .message
+      display: block
+      color: #e1e6fa
+      text-align: center
+
+      &[type=privmsg]
+        margin-left: 15ex
+        color: #000000
+        text-align: left
+
+      &[type=notice]
+        margin-left: 15ex
+        text-align: left
+        color: #666666
